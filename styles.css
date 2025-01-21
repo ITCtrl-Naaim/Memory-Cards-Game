@@ -69,7 +69,7 @@ body > main {
 
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   gap: 1rem;
   margin: 2rem auto 0;
   transition: 1s;
@@ -80,7 +80,7 @@ body > main {
 }
 
 .cards-container .card {
-  height: 7rem;
+  height: 5rem;
   cursor: pointer;
   position: relative;
   transform-style: preserve-3d;
