@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome Library -->
+    <script
+      src="https://kit.fontawesome.com/d3074918ef.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main>
+      <div class="content-container">
+        <div class="landing">
+          <button>Start Game</button>
+        </div>
+        <div class="info-container">
+          <div class="name">Hello: <span></span></div>
+          <div class="tries">Wrong Tries: <span>0</span></div>
+        </div>
+        <div class="cards-container">
+          <div class="card" data-icon="facebook">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-facebook-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="facebook">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-facebook-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="twitter">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-x-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="twitter">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-x-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="instagram">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-instagram-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="instagram">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-instagram-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="github">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-github-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="github">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-github-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="tiktok">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-tiktok-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="tiktok">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-tiktok-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="linkedin">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-linkedin-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="linkedin">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-linkedin-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="pinterest">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-pinterest-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="pinterest">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-pinterest-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="reddit">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-reddit-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="reddit">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-reddit-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="youtube">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-youtube-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="youtube">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-youtube-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="telegram">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-telegram-app-240.png" alt="" />
+            </div>
+          </div>
+          <div class="card" data-icon="telegram">
+            <div class="face front"></div>
+            <div class="face back">
+              <img src="./Images/icons8-telegram-app-240.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <button id="help-button">
+          <i class="fa-regular fa-lightbulb"></i>
+        </button>
+        <div class="results">
+          <div class="players"></div>
+          <button id="clear-button">Clear</button>
+        </div>
+      </div>
+    </main>
+    <audio id="start-game" src="./Audio/start-game.wav"></audio>
+    <audio id="successed" src="./Audio/successed.mp3"></audio>
+    <audio id="failed" src="./Audio/failed.wav"></audio>
+    <audio id="won" src="./Audio/game-completed.wav"></audio>
+    <audio id="lost" src="./Audio/lost.wav"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>

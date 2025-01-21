@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Tahoma, sans-serif;
+}
+
+body > main {
+  padding: 0 1rem;
+}
+
+.content-container {
+  width: 64rem;
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.landing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #03a8f4f3;
+}
+
+.landing button {
+  color: #fff;
+  background-color: #f44336;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 0px 10px #f44336;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.info-container {
+  margin: 1.2rem auto 0;
+  background-color: #f6f6f6;
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  border: 1px solid #2196f3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-container .name {
+  flex: 1;
+  text-transform: capitalize;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 1rem;
+  margin: 2rem auto 0;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+.cards-container .card {
+  height: 7rem;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+@media (min-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .cards-container .card {
+    height: 10rem;
+  }
+}
+
+.cards-container .card.flipped,
+.cards-container .card.matched {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  pointer-events: none;
+}
+
+.cards-container .card .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #2196f3;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.cards-container .card .front {
+  background-color: #333;
+}
+
+.cards-container .card .front::before {
+  content: "?";
+  color: #fff;
+  font-size: 5rem;
+}
+
+.cards-container .card .back {
+  background-color: #607d8b;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+}
+
+.cards-container .card .back img {
+  width: 5rem;
+  max-width: 100%;
+}
+
+.content-container #help-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  box-shadow: -1px -1px 5px #1e86db;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.content-container #help-button:hover {
+  box-shadow: 0px 2px 5px #1e86db;
+  background-color: #1e86db;
+}
+
+.content-container .players {
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.content-container .players .player {
+  background-color: #fff;
+  color: #333;
+  flex: 1;
+  min-width: 49%;
+  text-align: center;
+  border-radius: 0.5rem;
+  line-height: 3;
+  font-size: 1.2rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.content-container .players .player span {
+  text-transform: capitalize;
+}
+
+.content-container .results #clear-button {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  background-color: #2196f3;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.content-container .results #clear-button:hover {
+  background-color: #1e86db;
+}
